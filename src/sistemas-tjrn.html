@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+            --color-bg: #F5F1E8;
+            --color-secondary-bg: #C9E1A4;
+            --color-primary-text: #000000;
+            --color-secondary-text: #746F67;
+            --font-serif: "DM Serif Display", serif;
+            --font-sans: "Inter", sans-serif;
+        }
+    </style>
+    <title>Sistemas TJRN — Henrique Albuquerque</title>
+</head>
+
+<body class="text-[var(--color-primary-text)] font-sans bg-white antialiased">
+    <!-- Header -->
+    <header
+        class="bg-[var(--color-bg)] flex justify-between items-center px-6 py-6 md:px-12 lg:px-[120px] lg:py-[32px]">
+        <a href="index.html" class="font-semibold text-lg md:text-base hover:opacity-80 transition-opacity">Henrique
+            Albuquerque</a>
+
+        <!-- Navegação Desktop (Visível apenas em PCs: 1024px+) -->
+        <nav class="hidden lg:block">
+            <ul class="flex gap-8 text-[var(--color-secondary-text)] font-medium text-sm">
+                <li><a href="index.html#sobre" class="hover:text-black transition-colors">Sobre</a></li>
+                <li><a href="index.html#trabalhos" class="hover:text-black transition-colors">Trabalhos</a></li>
+                <li><a href="index.html#contato" class="hover:text-black transition-colors">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botão Menu Mobile & Tablet (Visível de 0px até 1023px) -->
+        <button id="open-menu-btn"
+            class="lg:hidden p-2 text-black focus:outline-none cursor-pointer hover:opacity-80 transition-opacity"
+            aria-label="Abrir menu">
+            <svg class="w-6 h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="6" cy="6" r="2" />
+                <circle cx="18" cy="6" r="2" />
+                <circle cx="6" cy="18" r="2" />
+                <circle cx="18" cy="18" r="2" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Overlay do Menu Fullscreen (Mobile & Tablet) -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-50 bg-[var(--color-bg)] hidden flex-col justify-between px-6 py-6 md:px-12 md:py-8 lg:px-[120px] overflow-y-auto">
+        <!-- Topo do Menu Overlay -->
+        <div class="flex justify-between items-center w-full">
+            <span class="font-semibold text-lg md:text-base">Henrique Albuquerque</span>
+            <button id="close-menu-btn"
+                class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#2A2927] text-white flex items-center justify-center focus:outline-none cursor-pointer hover:bg-black transition-colors"
+                aria-label="Fechar menu">
+                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Conteúdo Central do Menu -->
+        <div class="my-auto pt-8 pb-12 w-full grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 lg:gap-16 items-start">
+            <!-- Esquerda: Título da Navegação -->
+            <div class="md:col-span-5 flex flex-col gap-3 md:gap-4">
+                <span
+                    class="text-xs uppercase tracking-wider text-[var(--color-secondary-text)] font-medium">Navegação</span>
+                <h2 class="text-4xl md:text-5xl lg:text-[56px] font-serif font-medium leading-[1.1]">
+                    O que você quer explorar?
+                </h2>
+            </div>
+
+            <!-- Direita: Lista de Links -->
+            <div class="md:col-span-7 flex flex-col w-full">
+                <ul class="flex flex-col w-full border-t border-black/15">
+                    <!-- Link 1: Sobre -->
+                    <li class="border-b border-black/15">
+                        <a href="index.html#sobre"
+                            class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                            <div class="flex flex-col gap-1">
+                                <h3
+                                    class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
+                                    Sobre</h3>
+                                <p class="text-sm text-[var(--color-secondary-text)]">Perfil e trajetória</p>
+                            </div>
+                            <svg class="w-6 h-6 text-black group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Link 2: Trabalhos -->
+                    <li class="border-b border-black/15">
+                        <a href="index.html#trabalhos"
+                            class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                            <div class="flex flex-col gap-1">
+                                <h3
+                                    class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
+                                    Trabalhos</h3>
+                                <p class="text-sm text-[var(--color-secondary-text)]">Seleção 2026—2022</p>
+                            </div>
+                            <svg class="w-6 h-6 text-black group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Link 3: Contato -->
+                    <li class="border-b border-black/15">
+                        <a href="index.html#contato"
+                            class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                            <div class="flex flex-col gap-1">
+                                <h3
+                                    class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
+                                    Contato</h3>
+                                <p class="text-sm text-[var(--color-secondary-text)]">Vamos construir algo juntos</p>
+                            </div>
+                            <svg class="w-6 h-6 text-black group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rodapé do Menu Overlay -->
+        <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-6 border-t border-transparent">
+            <div class="flex items-center gap-2 text-sm text-[var(--color-secondary-text)]">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#6B9E38] inline-block"></span>
+                <span class="text-sm">Disponível para novos projetos</span>
+            </div>
+            <a href="mailto:hf.albuq@gmail.com" class="text-sm font-medium hover:underline">hf.albuq@gmail.com</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Top Hero Section (Cream Background) -->
+        <section
+            class="bg-[var(--color-bg)] px-6 pt-4 pb-12 md:px-12 md:pt-6 md:pb-16 lg:px-[120px] lg:pt-8 lg:pb-[96px]">
+            <!-- Voltar para trabalhos -->
+            <a href="index.html#trabalhos"
+                class="inline-flex items-center gap-2 text-sm font-medium text-black hover:opacity-75 transition-opacity mb-8 md:mb-10 lg:mb-12">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                Voltar para trabalhos
+            </a>
+
+            <!-- Informações do Projeto -->
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-16 mb-8 md:mb-12 lg:mb-14">
+                <!-- Título e Subtítulo -->
+                <div class="flex flex-col max-w-[700px]">
+                    <span
+                        class="text-xs uppercase tracking-wider text-[var(--color-secondary-text)] font-medium mb-3 md:mb-4">
+                        PRODUTO DIGITAL · SERVIÇO PÚBLICO
+                    </span>
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-serif font-medium leading-[1.05] mb-4 md:mb-6">
+                        Sistemas TJRN
+                    </h1>
+                    <p class="text-[var(--color-secondary-text)] text-base md:text-lg leading-relaxed max-w-[580px]">
+                        Uma suíte de sistemas jurídicos amplamente adotados por profissionais, servidores e a comunidade
+                        jurídica.
+                    </p>
+                </div>
+
+                <!-- Metadados (Ano & Atuação) -->
+                <div class="w-full lg:w-auto grid grid-cols-2 md:flex md:flex-col gap-6 lg:gap-8 pt-2 lg:pt-4 shrink-0">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-wider text-[var(--color-secondary-text)] font-medium block mb-1">ANO</span>
+                        <span class="text-base md:text-lg font-medium">2024 — 2026</span>
+                    </div>
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-wider text-[var(--color-secondary-text)] font-medium block mb-1">ATUAÇÃO</span>
+                        <span class="text-base md:text-lg font-medium max-w-[220px] block">Pesquisa, estratégia, product
+                            design e re-design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagem de Capa Hero (Mockup MacBook) -->
+            <div class="w-full flex justify-center">
+                <div class="relative w-full max-w-[1080px] aspect-[3208/1944]">
+                    <!-- Tela do Sistema TJRN -->
+                    <img class="absolute left-[9.8%] top-[2.5%] w-[81.2%] h-[86.2%] object-cover rounded-t-[4px]"
+                        src="./../public/assets/tjrn-cover-screen.png" alt="Tela do Sistema TJRN">
+                    <!-- Moldura do MacBook -->
+                    <img class="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                        src="./../public/assets/tjrn-macbook.png" alt="Macbook com Sistemas TJRN">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Conteúdo / Detalhes (Fundo Branco) -->
+        <section class="px-6 py-16 md:px-12 md:py-20 lg:px-[120px] lg:py-[100px] bg-white">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start">
+                <!-- Coluna Esquerda: Título Principal -->
+                <div class="lg:col-span-5">
+                    <h2 class="text-3xl sm:text-4xl lg:text-[46px] leading-[1.1] font-serif font-medium max-w-[480px]">
+                        Uma suíte de sistemas pensada para escala, clareza e confiabilidade.
+                    </h2>
+                </div>
+
+                <!-- Coluna Direita: Descrição e Destaques -->
+                <div class="lg:col-span-7 flex flex-col gap-6 lg:gap-8">
+                    <p class="text-lg md:text-xl font-medium text-[var(--color-primary-text)] leading-relaxed">
+                        O desafio era unificar múltiplos sistemas internos do TJRN em uma experiência consistente,
+                        acessível e escalável para diferentes perfis e contextos de uso.
+                    </p>
+                    <p class="text-[var(--color-secondary-text)] text-base md:text-lg leading-relaxed">
+                        Reorganizei o fluxo de trabalho em tarefas claras, padrões visuais coerentes e uma navegação que
+                        reduz esforço cognitivo. O resultado é uma suíte que facilita o acompanhamento de processos, a
+                        gestão de informações e a tomada de decisão, mantendo a robustez e a segurança necessárias a um
+                        ambiente jurídico.
+                    </p>
+
+                    <!-- Destaques / Métricas -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 md:pt-8 mt-2 border-t border-black/10">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-3xl md:text-4xl lg:text-[42px] font-serif font-medium leading-tight">16
+                                módulos</span>
+                            <span class="text-sm text-[var(--color-secondary-text)]">integrados em uma mesma
+                                linguagem</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span
+                                class="text-3xl md:text-4xl lg:text-[42px] font-serif font-medium leading-tight">100%</span>
+                            <span class="text-sm text-[var(--color-secondary-text)]">dos principais fluxos
+                                revisados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Galeria do Projeto -->
+        <section
+            class="px-6 pb-16 md:px-12 md:pb-20 lg:px-[120px] lg:pb-[100px] bg-white flex flex-col gap-8 md:gap-12">
+            <!-- Título da Galeria com Ícone -->
+            <div class="flex items-center gap-2 text-xs md:text-sm font-semibold tracking-wider uppercase text-black">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+                Galeria do projeto
+            </div>
+
+            <!-- Imagens da Galeria em Mockups de MacBook -->
+            <div class="flex flex-col gap-8 md:gap-12">
+                <!-- Imagem Principal da Galeria (Full Width) -->
+                <div class="w-full flex justify-center">
+                    <div class="relative w-full max-w-[1080px] aspect-[3208/1944]">
+                        <img class="absolute left-[9.8%] top-[2.5%] w-[81.2%] h-[86.2%] object-cover rounded-t-[4px]"
+                            src="./../public/assets/tjrn-gallery-main.png" alt="Sistema TJRN - Galeria Principal">
+                        <img class="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                            src="./../public/assets/tjrn-macbook.png" alt="Macbook com Sistemas TJRN">
+                    </div>
+                </div>
+
+                <!-- Grid com 2 Imagens Lado a Lado (Desktop) / Empilhadas (Mobile/Tablet) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+                    <!-- Galeria Item A -->
+                    <div class="w-full flex justify-center">
+                        <div class="relative w-full aspect-[3208/1944]">
+                            <img class="absolute left-[9.8%] top-[2.5%] w-[81.2%] h-[86.2%] object-cover rounded-t-[4px]"
+                                src="./../public/assets/tjrn-gallery-a.png" alt="Sistema TJRN - Interface A">
+                            <img class="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                                src="./../public/assets/tjrn-macbook.png" alt="Macbook com Sistemas TJRN">
+                        </div>
+                    </div>
+
+                    <!-- Galeria Item B -->
+                    <div class="w-full flex justify-center">
+                        <div class="relative w-full aspect-[3208/1944]">
+                            <img class="absolute left-[9.8%] top-[2.5%] w-[81.2%] h-[86.2%] object-cover rounded-t-[4px]"
+                                src="./../public/assets/tjrn-gallery-b.png" alt="Sistema TJRN - Interface B">
+                            <img class="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                                src="./../public/assets/tjrn-macbook.png" alt="Macbook com Sistemas TJRN">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Próximo Projeto -->
+    <footer
+        class="bg-[var(--color-bg)] px-6 pt-12 pb-10 md:px-12 md:pt-16 md:pb-12 lg:px-[120px] lg:pt-[80px] lg:pb-[56px] flex flex-col gap-10 md:gap-12">
+        <!-- Banner Próximo Projeto -->
+        <a href="franquia-bet.html" class="group flex flex-col gap-3 cursor-pointer">
+            <span class="text-xs uppercase tracking-wider text-[var(--color-secondary-text)] font-medium">PRÓXIMO
+                PROJETO</span>
+            <div class="flex justify-between items-center">
+                <h2
+                    class="text-3xl md:text-5xl lg:text-[56px] leading-[1.08] font-serif font-medium group-hover:translate-x-1.5 transition-transform">
+                    FranquiaBET
+                </h2>
+                <div
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center group-hover:translate-x-1.5 transition-transform">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-black" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+        <hr class="border-[var(--color-secondary-text)] opacity-30" />
+
+        <!-- Rodapé Contato & Redes -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <a class="text-lg md:text-[20px] hover:underline" href="mailto:hf.albuq@gmail.com">hf.albuq@gmail.com</a>
+
+            <nav>
+                <ul class="flex gap-2 text-[var(--color-secondary-text)] text-sm md:text-base">
+                    <li><a href="https://dribbble.com/rickyalbuq" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-black transition-colors">Dribbble ·</a></li>
+                    <li><a href="https://www.linkedin.com/in/rickyalbuq/" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-black transition-colors">LinkedIn ·</a></li>
+                    <li><a href="https://www.behance.net/rickyalbuq" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-black transition-colors">Behance</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Script Interativo do Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openBtn = document.getElementById('open-menu-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuNavLinks = document.querySelectorAll('.menu-nav-link');
+
+            if (openBtn && closeBtn && mobileMenu) {
+                openBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('flex');
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                });
+
+                menuNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('flex');
+                        mobileMenu.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
