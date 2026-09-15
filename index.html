@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+            --color-bg: #F5F1E8;
+            --color-secondary-bg: #C9E1A4;
+            --color-primary-text: #000000;
+            --color-secondary-text: #746F67;
+            --font-serif: "DM Serif Display", serif;
+            --font-sans: "Inter", sans-serif;
+        }
+    </style>
+    <title>Henrique Albuquerque</title>
+</head>
+
+<body class="text-[var(--color-primary-text)] font-sans bg-white antialiased">
+    <!-- Header -->
+    <header
+        class="bg-[var(--color-bg)] flex justify-between items-center px-6 py-6 md:px-12 lg:px-[120px] lg:py-[32px]">
+        <h1 class="font-semibold text-lg md:text-base">Henrique Albuquerque</h1>
+
+        <!-- Navegação Desktop (Visível apenas em PCs: 1024px+) -->
+        <nav class="hidden lg:block">
+            <ul class="flex gap-8 text-[var(--color-secondary-text)] font-medium text-sm">
+                <li><a href="#sobre" class="hover:text-black transition-colors">Sobre</a></li>
+                <li><a href="#trabalhos" class="hover:text-black transition-colors">Trabalhos</a></li>
+                <li><a href="#contato" class="hover:text-black transition-colors">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botão Menu Mobile & Tablet (Visível de 0px até 1023px) -->
+        <button id="open-menu-btn"
+            class="lg:hidden p-2 text-black focus:outline-none cursor-pointer hover:opacity-80 transition-opacity"
+            aria-label="Abrir menu">
+            <svg class="w-6 h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="6" cy="6" r="2" />
+                <circle cx="18" cy="6" r="2" />
+                <circle cx="6" cy="18" r="2" />
+                <circle cx="18" cy="18" r="2" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Overlay do Menu Fullscreen (Mobile & Tablet) -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-50 bg-[var(--color-bg)] hidden flex-col justify-between px-6 py-6 md:px-12 md:py-8 lg:px-[120px] overflow-y-auto">
+        <!-- Topo do Menu Overlay -->
+        <div class="flex justify-between items-center w-full">
+            <span class="font-semibold text-lg md:text-base">Henrique Albuquerque</span>
+            <button id="close-menu-btn"
+                class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#2A2927] text-white flex items-center justify-center focus:outline-none cursor-pointer hover:bg-black transition-colors"
+                aria-label="Fechar menu">
+                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Conteúdo Central do Menu -->
+        <div class="my-auto pt-8 pb-12 w-full grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 lg:gap-16 items-start">
+            <!-- Esquerda: Título da Navegação -->
+            <div class="md:col-span-5 flex flex-col gap-3 md:gap-4">
+                <span
+                    class="text-xs uppercase tracking-wider text-[var(--color-secondary-text)] font-medium">Navegação</span>
+                <h2 class="text-4xl md:text-5xl lg:text-[56px] font-serif font-medium leading-[1.1]">
+                    O que você quer explorar?
+                </h2>
+            </div>
+
+            <!-- Direita: Lista de Links -->
+            <div class="md:col-span-7 flex flex-col w-full">
+                <ul class="flex flex-col w-full border-t border-black/15">
+                    <!-- Link 1: Sobre -->
+                    <li class="border-b border-black/15">
+                        <a href="#sobre" class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                            <div class="flex flex-col gap-1">
+                                <h3
+                                    class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
+                                    Sobre</h3>
+                                <p class="text-sm text-[var(--color-secondary-text)]">Perfil e trajetória</p>
+                            </div>
+                            <svg class="w-6 h-6 text-black group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Link 2: Trabalhos -->
+                    <li class="border-b border-black/15">
+                        <a href="#trabalhos" class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                            <div class="flex flex-col gap-1">
+                                <h3
+                                    class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
+                                    Trabalhos</h3>
+                                <p class="text-sm text-[var(--color-secondary-text)]">Seleção 2026—2022</p>
+                            </div>
+                            <svg class="w-6 h-6 text-black group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Link 3: Contato -->
+                    <li class="border-b border-black/15">
+                        <a href="#contato" class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                            <div class="flex flex-col gap-1">
+                                <h3
+                                    class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
+                                    Contato</h3>
+                                <p class="text-sm text-[var(--color-secondary-text)]">Vamos construir algo juntos</p>
+                            </div>
+                            <svg class="w-6 h-6 text-black group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rodapé do Menu Overlay -->
+        <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-6 border-t border-transparent">
+            <div class="flex items-center gap-2 text-sm text-[var(--color-secondary-text)]">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#6B9E38] inline-block"></span>
+                <span class="text-sm">Disponível para novos projetos</span>
+            </div>
+            <a href="mailto:hf.albuq@gmail.com" class="text-sm font-medium hover:underline">hf.albuq@gmail.com</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Seção Sobre / Hero (Side-by-side no Tablet md: e Desktop lg:) -->
+        <section id="sobre"
+            class="bg-[var(--color-bg)] flex flex-col md:flex-row justify-between items-start md:items-end gap-8 lg:gap-[64px] px-6 pt-12 pb-16 md:px-12 md:pt-16 md:pb-20 lg:px-[120px] lg:pt-[100px] lg:pb-[120px]">
+            <div class="flex flex-col gap-6 lg:gap-[32px] max-w-[750px] md:w-[60%] lg:w-auto">
+                <h2
+                    class="text-4xl sm:text-5xl md:text-5xl lg:text-[76px] leading-[1.08] lg:leading-[1.04] font-medium font-serif">
+                    Transformando ideias em experiências.
+                </h2>
+                <p class="text-[var(--color-secondary-text)] text-base md:text-lg max-w-[475px]">
+                    Sou um designer de produtos e experiências digitais. No meu trabalho, priorizo a intenção clara, a
+                    simplicidade funcional e a criação de um impacto duradouro.
+                </p>
+            </div>
+            <!-- Foto de perfil: alinhada à direita no tablet (md:) e desktop (lg:) -->
+            <div
+                class="w-full max-w-[280px] md:w-[280px] lg:max-w-[360px] aspect-[4/5] rounded-t-[140px] md:rounded-t-[160px] lg:rounded-t-[190px] rounded-b-[16px] overflow-hidden shrink-0 mx-auto md:mx-0">
+                <img class="w-full h-full object-cover" src="./public/assets/retrato.png"
+                    alt="Foto de Henrique Albuquerque">
+            </div>
+        </section>
+
+        <!-- Seção Trabalhos (Side-by-side no Tablet md: e Desktop lg:) -->
+        <section id="trabalhos"
+            class="px-6 py-16 md:px-12 md:py-20 lg:px-[120px] lg:pt-[80px] lg:pb-[110px] flex flex-col gap-8 md:gap-12 lg:gap-[48px]">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-2">
+                <h2 class="text-3xl md:text-4xl lg:text-[48px] leading-[1] font-medium font-serif">Trabalhos</h2>
+                <p class="text-[var(--color-secondary-text)] text-xs md:text-sm uppercase tracking-wider">Seleção
+                    2026—2022</p>
+            </div>
+
+            <ul class="flex flex-col gap-12 lg:gap-[48px]">
+                <!-- Projeto 1: Justiça RN -->
+                <li class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-[40px] items-start md:items-center">
+                    <div class="w-full md:w-[48%] md:min-w-[340px] lg:w-[600px] lg:min-w-[600px] rounded-[16px] overflow-hidden shrink-0"
+                        style="aspect-ratio: 600/350;">
+                        <img class="w-full h-full object-cover object-center" src="./public/assets/justica-cover.png"
+                            alt="Imagem do Projeto Justiça RN">
+                    </div>
+                    <div class="flex flex-col md:w-[52%] lg:w-auto">
+                        <div
+                            class="flex items-center gap-2 mb-3 lg:mb-[18px] uppercase text-xs text-[var(--color-secondary-text)] font-medium">
+                            <img src="./public/assets/tag.svg" alt="Ícone de tag" class="w-4 h-4">
+                            Projeto Real
+                        </div>
+
+                        <h3
+                            class="text-3xl md:text-4xl lg:text-[42px] leading-[1.1] lg:leading-[1] font-medium font-serif mb-3 lg:mb-[18px]">
+                            Justiça RN</h3>
+
+                        <p
+                            class="text-[var(--color-secondary-text)] text-base lg:text-[17px] leading-relaxed mb-4 lg:mb-[18px]">
+                            A plataforma permite que cidadãos ingressem com ações de pequenas causas e acompanhem seus
+                            processos pelo celular, sem precisar de advogado.
+                        </p>
+
+                        <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                            href="justica-rn.html">
+                            Ver projeto
+                            <img src="./public/assets/arrow-right.svg" alt="Seta indicando para a direita"
+                                class="w-4 h-4">
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Projeto 2: Sistemas TJRN -->
+                <li class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-[40px] items-start md:items-center">
+                    <div class="w-full md:w-[48%] md:min-w-[340px] lg:w-[600px] lg:min-w-[600px] rounded-[16px] overflow-hidden bg-[var(--color-secondary-bg)] relative flex items-center justify-center shrink-0 p-4"
+                        style="aspect-ratio: 600/350;">
+                        <div class="relative w-[82%] max-w-[479px] flex items-center justify-center" style="aspect-ratio: 479/290;">
+                            <!-- Tela do Sistema TJRN -->
+                            <img class="absolute left-[9.8%] top-[2.5%] w-[81.2%] h-[86.2%] object-cover rounded-t-[4px]" src="./public/assets/tjrn-cover-screen.png" alt="Tela do Sistema TJRN">
+                            <!-- Moldura do MacBook -->
+                            <img class="absolute inset-0 w-full h-full object-contain pointer-events-none" src="./public/assets/tjrn-macbook.png" alt="Macbook com Sistemas TJRN">
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:w-[52%] lg:w-auto">
+                        <div
+                            class="flex items-center gap-2 mb-3 lg:mb-[18px] uppercase text-xs text-[var(--color-secondary-text)] font-medium">
+                            <img src="./public/assets/tag.svg" alt="Ícone de tag" class="w-4 h-4">
+                            Projeto Real
+                        </div>
+                        <h3
+                            class="text-3xl md:text-4xl lg:text-[42px] leading-[1.1] lg:leading-[1] font-medium font-serif mb-3 lg:mb-[18px]">
+                            Sistemas TJRN</h3>
+                        <p
+                            class="text-[var(--color-secondary-text)] text-base lg:text-[17px] leading-relaxed mb-4 lg:mb-[18px]">
+                            Uma suíte de sistemas jurídicos amplamente adotados por profissionais, servidores e a
+                            comunidade jurídica.
+                        </p>
+                        <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                            href="sistemas-tjrn.html">
+                            Ver projeto
+                            <img src="./public/assets/arrow-right.svg" alt="Seta indicando para a direita"
+                                class="w-4 h-4">
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Projeto 3: FranquiaBET -->
+                <li class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-[40px] items-start md:items-center">
+                    <div class="w-full md:w-[48%] md:min-w-[340px] lg:w-[600px] lg:min-w-[600px] rounded-[16px] overflow-hidden shrink-0"
+                        style="aspect-ratio: 600/350;">
+                        <img class="w-full h-full object-cover object-center"
+                            src="./public/assets/franquiabet-cover.png" alt="Imagem do Projeto FranquiaBET">
+                    </div>
+                    <div class="flex flex-col md:w-[52%] lg:w-auto">
+                        <div
+                            class="flex items-center gap-2 mb-3 lg:mb-[18px] uppercase text-xs text-[var(--color-secondary-text)] font-medium">
+                            <img src="./public/assets/tag.svg" alt="Ícone de tag" class="w-4 h-4">
+                            Projeto Real
+                        </div>
+                        <h3
+                            class="text-3xl md:text-4xl lg:text-[42px] leading-[1.1] lg:leading-[1] font-medium font-serif mb-3 lg:mb-[18px]">
+                            FranquiaBET</h3>
+                        <p
+                            class="text-[var(--color-secondary-text)] text-base lg:text-[17px] leading-relaxed mb-4 lg:mb-[18px]">
+                            Uma plataforma SaaS e um aplicativo móvel dedicados a apostas esportivas e jogos de cassino
+                            online.
+                        </p>
+                        <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                            href="franquia-bet.html">
+                            Ver projeto
+                            <img src="./public/assets/arrow-right.svg" alt="Seta indicando para a direita"
+                                class="w-4 h-4">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contato"
+        class="bg-[var(--color-bg)] flex flex-col px-6 pt-16 pb-10 md:px-12 md:pt-20 lg:px-[120px] lg:pt-[112px] lg:pb-[56px] gap-8 lg:gap-[36px]">
+        <h2
+            class="text-3xl md:text-5xl lg:text-[68px] leading-[1.1] lg:leading-[1.08] font-medium font-serif max-w-[800px]">
+            Vamos conversar sobre o que você quer construir.
+        </h2>
+
+        <hr class="border-[var(--color-secondary-text)] opacity-30" />
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <a class="text-lg md:text-[20px] hover:underline" href="mailto:hf.albuq@gmail.com">hf.albuq@gmail.com</a>
+
+            <nav>
+                <ul class="flex gap-2 text-[var(--color-secondary-text)] text-sm md:text-base">
+                    <li><a href="https://dribbble.com/rickyalbuq" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-black transition-colors">Dribbble ·</a></li>
+                    <li><a href="https://www.linkedin.com/in/rickyalbuq/" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-black transition-colors">LinkedIn ·</a></li>
+                    <li><a href="https://www.behance.net/rickyalbuq" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-black transition-colors">Behance</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Script Interativo do Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openBtn = document.getElementById('open-menu-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuNavLinks = document.querySelectorAll('.menu-nav-link');
+
+            if (openBtn && closeBtn && mobileMenu) {
+                openBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('flex');
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                });
+
+                menuNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('flex');
+                        mobileMenu.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -20,21 +20,22 @@
             --font-sans: "Inter", sans-serif;
         }
     </style>
-    <title>Henrique Albuquerque</title>
+    <title>FranquiaBET — Henrique Albuquerque</title>
 </head>
 
 <body class="text-[var(--color-primary-text)] font-sans bg-white antialiased">
     <!-- Header -->
     <header
         class="bg-[var(--color-bg)] flex justify-between items-center px-6 py-6 md:px-12 lg:px-[120px] lg:py-[32px]">
-        <h1 class="font-semibold text-lg md:text-base">Henrique Albuquerque</h1>
+        <a href="index.html" class="font-semibold text-lg md:text-base hover:opacity-80 transition-opacity">Henrique
+            Albuquerque</a>
 
         <!-- Navegação Desktop (Visível apenas em PCs: 1024px+) -->
         <nav class="hidden lg:block">
             <ul class="flex gap-8 text-[var(--color-secondary-text)] font-medium text-sm">
-                <li><a href="#sobre" class="hover:text-black transition-colors">Sobre</a></li>
-                <li><a href="#trabalhos" class="hover:text-black transition-colors">Trabalhos</a></li>
-                <li><a href="#contato" class="hover:text-black transition-colors">Contato</a></li>
+                <li><a href="index.html#sobre" class="hover:text-black transition-colors">Sobre</a></li>
+                <li><a href="index.html#trabalhos" class="hover:text-black transition-colors">Trabalhos</a></li>
+                <li><a href="index.html#contato" class="hover:text-black transition-colors">Contato</a></li>
             </ul>
         </nav>
 
@@ -83,7 +84,8 @@
                 <ul class="flex flex-col w-full border-t border-black/15">
                     <!-- Link 1: Sobre -->
                     <li class="border-b border-black/15">
-                        <a href="#sobre" class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                        <a href="index.html#sobre"
+                            class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
                             <div class="flex flex-col gap-1">
                                 <h3
                                     class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
@@ -100,7 +102,8 @@
 
                     <!-- Link 2: Trabalhos -->
                     <li class="border-b border-black/15">
-                        <a href="#trabalhos" class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                        <a href="index.html#trabalhos"
+                            class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
                             <div class="flex flex-col gap-1">
                                 <h3
                                     class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
@@ -117,7 +120,8 @@
 
                     <!-- Link 3: Contato -->
                     <li class="border-b border-black/15">
-                        <a href="#contato" class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                        <a href="index.html#contato"
+                            class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
                             <div class="flex flex-col gap-1">
                                 <h3
                                     class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
@@ -147,138 +151,152 @@
     </div>
 
     <main>
-        <!-- Seção Sobre / Hero (Side-by-side no Tablet md: e Desktop lg:) -->
-        <section id="sobre"
-            class="bg-[var(--color-bg)] flex flex-col md:flex-row justify-between items-start md:items-end gap-8 lg:gap-[64px] px-6 pt-12 pb-16 md:px-12 md:pt-16 md:pb-20 lg:px-[120px] lg:pt-[100px] lg:pb-[120px]">
-            <div class="flex flex-col gap-6 lg:gap-[32px] max-w-[750px] md:w-[60%] lg:w-auto">
-                <h2
-                    class="text-4xl sm:text-5xl md:text-5xl lg:text-[76px] leading-[1.08] lg:leading-[1.04] font-medium font-serif">
-                    Transformando ideias em experiências.
-                </h2>
-                <p class="text-[var(--color-secondary-text)] text-base md:text-lg max-w-[475px]">
-                    Sou um designer de produtos e experiências digitais. No meu trabalho, priorizo a intenção clara, a
-                    simplicidade funcional e a criação de um impacto duradouro.
-                </p>
+        <!-- Top Hero Section (Cream Background) -->
+        <section
+            class="bg-[var(--color-bg)] px-6 pt-4 pb-12 md:px-12 md:pt-6 md:pb-16 lg:px-[120px] lg:pt-8 lg:pb-[96px]">
+            <!-- Voltar para trabalhos -->
+            <a href="index.html#trabalhos"
+                class="inline-flex items-center gap-2 text-sm font-medium text-black hover:opacity-75 transition-opacity mb-8 md:mb-10 lg:mb-12">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                Voltar para trabalhos
+            </a>
+
+            <!-- Informações do Projeto -->
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-16 mb-8 md:mb-12 lg:mb-14">
+                <!-- Título e Subtítulo -->
+                <div class="flex flex-col max-w-[700px]">
+                    <span
+                        class="text-xs uppercase tracking-wider text-[var(--color-secondary-text)] font-medium mb-3 md:mb-4">
+                        PRODUTO DIGITAL · APOSTAS E CASSINO
+                    </span>
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-serif font-medium leading-[1.05] mb-4 md:mb-6">
+                        FranquiaBET
+                    </h1>
+                    <p class="text-[var(--color-secondary-text)] text-base md:text-lg leading-relaxed max-w-[580px]">
+                        Uma plataforma SaaS e um aplicativo móvel dedicados a apostas esportivas e jogos de cassino online.
+                    </p>
+                </div>
+
+                <!-- Metadados (Ano & Atuação) -->
+                <div class="w-full lg:w-auto grid grid-cols-2 md:flex md:flex-col gap-6 lg:gap-8 pt-2 lg:pt-4 shrink-0">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-wider text-[var(--color-secondary-text)] font-medium block mb-1">ANO</span>
+                        <span class="text-base md:text-lg font-medium">2022 — 2024</span>
+                    </div>
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-wider text-[var(--color-secondary-text)] font-medium block mb-1">ATUAÇÃO</span>
+                        <span class="text-base md:text-lg font-medium max-w-[220px] block">Pesquisa, estratégia, product
+                            design e re-design</span>
+                    </div>
+                </div>
             </div>
-            <!-- Foto de perfil: alinhada à direita no tablet (md:) e desktop (lg:) -->
-            <div
-                class="w-full max-w-[280px] md:w-[280px] lg:max-w-[360px] aspect-[4/5] rounded-t-[140px] md:rounded-t-[160px] lg:rounded-t-[190px] rounded-b-[16px] overflow-hidden shrink-0 mx-auto md:mx-0">
-                <img class="w-full h-full object-cover" src="./../public/assets/retrato.png"
-                    alt="Foto de Henrique Albuquerque">
+
+            <!-- Imagem de Capa Hero -->
+            <div class="w-full rounded-[16px] md:rounded-[20px] lg:rounded-[24px] overflow-hidden shadow-sm">
+                <img class="w-full h-auto object-cover" src="./public/assets/franquiabet-cover.png"
+                    alt="Capa do projeto FranquiaBET">
             </div>
         </section>
 
-        <!-- Seção Trabalhos (Side-by-side no Tablet md: e Desktop lg:) -->
-        <section id="trabalhos"
-            class="px-6 py-16 md:px-12 md:py-20 lg:px-[120px] lg:pt-[80px] lg:pb-[110px] flex flex-col gap-8 md:gap-12 lg:gap-[48px]">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-2">
-                <h2 class="text-3xl md:text-4xl lg:text-[48px] leading-[1] font-medium font-serif">Trabalhos</h2>
-                <p class="text-[var(--color-secondary-text)] text-xs md:text-sm uppercase tracking-wider">Seleção
-                    2026—2022</p>
+        <!-- Seção de Conteúdo / Detalhes (Fundo Branco) -->
+        <section class="px-6 py-16 md:px-12 md:py-20 lg:px-[120px] lg:py-[100px] bg-white">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start">
+                <!-- Coluna Esquerda: Título Principal -->
+                <div class="lg:col-span-5">
+                    <h2 class="text-3xl sm:text-4xl lg:text-[46px] leading-[1.1] font-serif font-medium max-w-[480px]">
+                        Uma experiência de apostas mais clara, rápida e confiável.
+                    </h2>
+                </div>
+
+                <!-- Coluna Direita: Descrição e Destaques -->
+                <div class="lg:col-span-7 flex flex-col gap-6 lg:gap-8">
+                    <p class="text-lg md:text-xl font-medium text-[var(--color-primary-text)] leading-relaxed">
+                        O desafio era transformar uma operação complexa de apostas em uma jornada simples, rápida e segura
+                        para franqueados, operadores e jogadores.
+                    </p>
+                    <p class="text-[var(--color-secondary-text)] text-base md:text-lg leading-relaxed">
+                        Organizei o fluxo em tarefas claras, padrões visuais coerentes e uma navegação que reduz esforço
+                        cognitivo. O resultado é uma plataforma que facilita a gestão de operações, a tomada de decisão e
+                        a experiência do usuário final, mantendo a robustez e a segurança necessárias a um ambiente de
+                        apostas online.
+                    </p>
+
+                    <!-- Destaques / Métricas -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 md:pt-8 mt-2 border-t border-black/10">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-3xl md:text-4xl lg:text-[42px] font-serif font-medium leading-tight">8
+                                módulos</span>
+                            <span class="text-sm text-[var(--color-secondary-text)]">integrados em uma mesma
+                                linguagem</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span
+                                class="text-3xl md:text-4xl lg:text-[42px] font-serif font-medium leading-tight">100%</span>
+                            <span class="text-sm text-[var(--color-secondary-text)]">dos principais fluxos
+                                revisados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Galeria do Projeto -->
+        <section
+            class="px-6 pb-16 md:px-12 md:pb-20 lg:px-[120px] lg:pb-[100px] bg-white flex flex-col gap-8 md:gap-12">
+            <!-- Título da Galeria com Ícone -->
+            <div class="flex items-center gap-2 text-xs md:text-sm font-semibold tracking-wider uppercase text-black">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+                Galeria do projeto
             </div>
 
-            <ul class="flex flex-col gap-12 lg:gap-[48px]">
-                <!-- Projeto 1: Justiça RN -->
-                <li class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-[40px] items-start md:items-center">
-                    <div class="w-full md:w-[48%] md:min-w-[340px] lg:w-[600px] lg:min-w-[600px] rounded-[16px] overflow-hidden shrink-0"
-                        style="aspect-ratio: 600/350;">
-                        <img class="w-full h-full object-cover object-center" src="./../public/assets/justica-cover.png"
-                            alt="Imagem do Projeto Justiça RN">
+            <!-- Imagens da Galeria em Mockups de MacBook -->
+            <div class="flex flex-col gap-8 md:gap-12">
+                <!-- Imagem Principal da Galeria (Full Width) -->
+                <div class="w-full flex justify-center">
+                    <div class="relative w-full max-w-[1080px] aspect-[3208/1944]">
+                        <img class="absolute left-[9.8%] top-[2.5%] w-[81.2%] h-[86.2%] object-cover rounded-t-[4px]"
+                            src="./public/assets/franquiabet-gallery-main.png" alt="FranquiaBET - Galeria Principal">
+                        <img class="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                            src="./public/assets/franquiabet-macbook.png" alt="Macbook com FranquiaBET">
                     </div>
-                    <div class="flex flex-col md:w-[52%] lg:w-auto">
-                        <div
-                            class="flex items-center gap-2 mb-3 lg:mb-[18px] uppercase text-xs text-[var(--color-secondary-text)] font-medium">
-                            <img src="./../public/assets/tag.svg" alt="Ícone de tag" class="w-4 h-4">
-                            Projeto Real
-                        </div>
+                </div>
 
-                        <h3
-                            class="text-3xl md:text-4xl lg:text-[42px] leading-[1.1] lg:leading-[1] font-medium font-serif mb-3 lg:mb-[18px]">
-                            Justiça RN</h3>
-
-                        <p
-                            class="text-[var(--color-secondary-text)] text-base lg:text-[17px] leading-relaxed mb-4 lg:mb-[18px]">
-                            A plataforma permite que cidadãos ingressem com ações de pequenas causas e acompanhem seus
-                            processos pelo celular, sem precisar de advogado.
-                        </p>
-
-                        <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
-                            href="justica-rn.html">
-                            Ver projeto
-                            <img src="./../public/assets/arrow-right.svg" alt="Seta indicando para a direita"
-                                class="w-4 h-4">
-                        </a>
-                    </div>
-                </li>
-
-                <!-- Projeto 2: Sistemas TJRN -->
-                <li class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-[40px] items-start md:items-center">
-                    <div class="w-full md:w-[48%] md:min-w-[340px] lg:w-[600px] lg:min-w-[600px] rounded-[16px] overflow-hidden bg-[var(--color-secondary-bg)] relative flex items-center justify-center shrink-0 p-4"
-                        style="aspect-ratio: 600/350;">
-                        <div class="relative w-[82%] max-w-[479px] flex items-center justify-center" style="aspect-ratio: 479/290;">
-                            <!-- Tela do Sistema TJRN -->
-                            <img class="absolute left-[9.8%] top-[2.5%] w-[81.2%] h-[86.2%] object-cover rounded-t-[4px]" src="./../public/assets/tjrn-cover-screen.png" alt="Tela do Sistema TJRN">
-                            <!-- Moldura do MacBook -->
-                            <img class="absolute inset-0 w-full h-full object-contain pointer-events-none" src="./../public/assets/tjrn-macbook.png" alt="Macbook com Sistemas TJRN">
+                <!-- Grid com 2 Imagens Lado a Lado (Desktop) / Empilhadas (Mobile/Tablet) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+                    <!-- Galeria Item A -->
+                    <div class="w-full flex justify-center">
+                        <div class="relative w-full aspect-[3208/1944]">
+                            <img class="absolute left-[9.8%] top-[2.5%] w-[81.2%] h-[86.2%] object-cover rounded-t-[4px]"
+                                src="./public/assets/franquiabet-gallery-a.png" alt="FranquiaBET - Interface A">
+                            <img class="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                                src="./public/assets/franquiabet-macbook.png" alt="Macbook com FranquiaBET">
                         </div>
                     </div>
-                    <div class="flex flex-col md:w-[52%] lg:w-auto">
-                        <div
-                            class="flex items-center gap-2 mb-3 lg:mb-[18px] uppercase text-xs text-[var(--color-secondary-text)] font-medium">
-                            <img src="./../public/assets/tag.svg" alt="Ícone de tag" class="w-4 h-4">
-                            Projeto Real
-                        </div>
-                        <h3
-                            class="text-3xl md:text-4xl lg:text-[42px] leading-[1.1] lg:leading-[1] font-medium font-serif mb-3 lg:mb-[18px]">
-                            Sistemas TJRN</h3>
-                        <p
-                            class="text-[var(--color-secondary-text)] text-base lg:text-[17px] leading-relaxed mb-4 lg:mb-[18px]">
-                            Uma suíte de sistemas jurídicos amplamente adotados por profissionais, servidores e a
-                            comunidade jurídica.
-                        </p>
-                        <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
-                            href="sistemas-tjrn.html">
-                            Ver projeto
-                            <img src="./../public/assets/arrow-right.svg" alt="Seta indicando para a direita"
-                                class="w-4 h-4">
-                        </a>
-                    </div>
-                </li>
 
-                <!-- Projeto 3: FranquiaBET -->
-                <li class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-[40px] items-start md:items-center">
-                    <div class="w-full md:w-[48%] md:min-w-[340px] lg:w-[600px] lg:min-w-[600px] rounded-[16px] overflow-hidden shrink-0"
-                        style="aspect-ratio: 600/350;">
-                        <img class="w-full h-full object-cover object-center"
-                            src="./../public/assets/franquiabet-cover.png" alt="Imagem do Projeto FranquiaBET">
-                    </div>
-                    <div class="flex flex-col md:w-[52%] lg:w-auto">
-                        <div
-                            class="flex items-center gap-2 mb-3 lg:mb-[18px] uppercase text-xs text-[var(--color-secondary-text)] font-medium">
-                            <img src="./../public/assets/tag.svg" alt="Ícone de tag" class="w-4 h-4">
-                            Projeto Real
+                    <!-- Galeria Item B -->
+                    <div class="w-full flex justify-center">
+                        <div class="relative w-full aspect-[3208/1944]">
+                            <img class="absolute left-[9.8%] top-[2.5%] w-[81.2%] h-[86.2%] object-cover rounded-t-[4px]"
+                                src="./public/assets/franquiabet-gallery-b.png" alt="FranquiaBET - Interface B">
+                            <img class="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                                src="./public/assets/franquiabet-macbook.png" alt="Macbook com FranquiaBET">
                         </div>
-                        <h3
-                            class="text-3xl md:text-4xl lg:text-[42px] leading-[1.1] lg:leading-[1] font-medium font-serif mb-3 lg:mb-[18px]">
-                            FranquiaBET</h3>
-                        <p
-                            class="text-[var(--color-secondary-text)] text-base lg:text-[17px] leading-relaxed mb-4 lg:mb-[18px]">
-                            Uma plataforma SaaS e um aplicativo móvel dedicados a apostas esportivas e jogos de cassino
-                            online.
-                        </p>
-                        <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
-                            href="franquia-bet.html">
-                            Ver projeto
-                            <img src="./../public/assets/arrow-right.svg" alt="Seta indicando para a direita"
-                                class="w-4 h-4">
-                        </a>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Final (Contato) -->
     <footer id="contato"
         class="bg-[var(--color-bg)] flex flex-col px-6 pt-16 pb-10 md:px-12 md:pt-20 lg:px-[120px] lg:pt-[112px] lg:pb-[56px] gap-8 lg:gap-[36px]">
         <h2
