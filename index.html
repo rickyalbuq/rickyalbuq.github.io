@@ -34,6 +34,7 @@
             <ul class="flex gap-8 text-[var(--color-secondary-text)] font-medium text-sm">
                 <li><a href="#sobre" class="hover:text-black transition-colors">Sobre</a></li>
                 <li><a href="#trabalhos" class="hover:text-black transition-colors">Trabalhos</a></li>
+                <li><a href="#estudos" class="hover:text-black transition-colors">Estudos</a></li>
                 <li><a href="#contato" class="hover:text-black transition-colors">Contato</a></li>
             </ul>
         </nav>
@@ -115,7 +116,24 @@
                         </a>
                     </li>
 
-                    <!-- Link 3: Contato -->
+                    <!-- Link 3: Estudos -->
+                    <li class="border-b border-black/15">
+                        <a href="#estudos" class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
+                            <div class="flex flex-col gap-1">
+                                <h3
+                                    class="text-3xl md:text-4xl font-serif font-medium group-hover:translate-x-1 transition-transform">
+                                    Estudos</h3>
+                                <p class="text-sm text-[var(--color-secondary-text)]">Seleção 2026—2022</p>
+                            </div>
+                            <svg class="w-6 h-6 text-black group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Link 4: Contato -->
                     <li class="border-b border-black/15">
                         <a href="#contato" class="menu-nav-link flex justify-between items-center py-5 md:py-6 group">
                             <div class="flex flex-col gap-1">
@@ -170,7 +188,7 @@
 
         <!-- Seção Trabalhos (Side-by-side no Tablet md: e Desktop lg:) -->
         <section id="trabalhos"
-            class="px-6 py-16 md:px-12 md:py-20 lg:px-[120px] lg:pt-[80px] lg:pb-[110px] flex flex-col gap-8 md:gap-12 lg:gap-[48px]">
+            class="px-6 py-16 md:px-12 md:pt-20 md:pb-10 lg:px-[120px] lg:pt-[80px] lg:pb-[48px] flex flex-col gap-8 md:gap-12 lg:gap-[48px]">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-2">
                 <h2 class="text-3xl md:text-4xl lg:text-[48px] leading-[1] font-medium font-serif">Trabalhos</h2>
                 <p class="text-[var(--color-secondary-text)] text-xs md:text-sm uppercase tracking-wider">Seleção
@@ -268,6 +286,117 @@
                         </p>
                         <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
                             href="franquia-bet.html">
+                            Ver projeto
+                            <img src="./public/assets/arrow-right.svg" alt="Seta indicando para a direita"
+                                class="w-4 h-4">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção Estudos (Side-by-side no Tablet md: e Desktop lg:) -->
+        <section id="estudos"
+            class="px-6 py-16 md:px-12 md:pt-10 md:pb-20 lg:px-[120px] lg:pt-[48px] lg:pb-[110px] flex flex-col gap-8 md:gap-12 lg:gap-[48px]">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-2">
+                <h2 class="text-3xl md:text-4xl lg:text-[48px] leading-[1] font-medium font-serif">Estudos</h2>
+                <p class="text-[var(--color-secondary-text)] text-xs md:text-sm uppercase tracking-wider">Seleção
+                    2026—2022</p>
+            </div>
+
+            <ul class="flex flex-col gap-12 lg:gap-[48px]">
+                <!-- Estudo 1: Pay, Watch! -->
+                <li class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-[40px] items-start md:items-center">
+                    <div class="w-full md:w-[48%] md:min-w-[340px] lg:w-[600px] lg:min-w-[600px] rounded-[16px] overflow-hidden shrink-0"
+                        style="aspect-ratio: 600/350;">
+                        <img class="w-full h-full object-cover object-center" src="./public/assets/pay-watch-cover.png"
+                            alt="Imagem do Projeto Pay, Watch!">
+                    </div>
+                    <div class="flex flex-col md:w-[52%] lg:w-auto">
+                        <div
+                            class="flex items-center gap-2 mb-3 lg:mb-[18px] uppercase text-xs text-[var(--color-secondary-text)] font-medium">
+                            <img src="./public/assets/tag.svg" alt="Ícone de tag" class="w-4 h-4">
+                            Estudo de Caso
+                        </div>
+
+                        <h3
+                            class="text-3xl md:text-4xl lg:text-[42px] leading-[1.1] lg:leading-[1] font-medium font-serif mb-3 lg:mb-[18px]">
+                            Pay, Watch!</h3>
+
+                        <p
+                            class="text-[var(--color-secondary-text)] text-base lg:text-[17px] leading-relaxed mb-4 lg:mb-[18px]">
+                            Uma plataforma de financiamento coletivo em que a comunidade apoia novos criadores e filmes
+                            através de um modelo de crowdfund por episódios.
+                        </p>
+
+                        <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                            href="pay-watch.html">
+                            Ver projeto
+                            <img src="./public/assets/arrow-right.svg" alt="Seta indicando para a direita"
+                                class="w-4 h-4">
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Estudo 2: Lojinha -->
+                <li class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-[40px] items-start md:items-center">
+                    <div class="w-full md:w-[48%] md:min-w-[340px] lg:w-[600px] lg:min-w-[600px] rounded-[16px] overflow-hidden shrink-0"
+                        style="aspect-ratio: 600/350;">
+                        <img class="w-full h-full object-cover object-center" src="./public/assets/lojinha-cover.png"
+                            alt="Imagem do Projeto Lojinha">
+                    </div>
+                    <div class="flex flex-col md:w-[52%] lg:w-auto">
+                        <div
+                            class="flex items-center gap-2 mb-3 lg:mb-[18px] uppercase text-xs text-[var(--color-secondary-text)] font-medium">
+                            <img src="./public/assets/tag.svg" alt="Ícone de tag" class="w-4 h-4">
+                            Estudo de Caso
+                        </div>
+
+                        <h3
+                            class="text-3xl md:text-4xl lg:text-[42px] leading-[1.1] lg:leading-[1] font-medium font-serif mb-3 lg:mb-[18px]">
+                            Lojinha</h3>
+
+                        <p
+                            class="text-[var(--color-secondary-text)] text-base lg:text-[17px] leading-relaxed mb-4 lg:mb-[18px]">
+                            Redesign de e-commerce focado em otimizar a navegação, busca e descoberta de produtos e uma
+                            jornada de compra simples.
+                        </p>
+
+                        <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                            href="lojinha.html">
+                            Ver projeto
+                            <img src="./public/assets/arrow-right.svg" alt="Seta indicando para a direita"
+                                class="w-4 h-4">
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Estudo 3: Cards Against Humanity -->
+                <li class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-[40px] items-start md:items-center">
+                    <div class="w-full md:w-[48%] md:min-w-[340px] lg:w-[600px] lg:min-w-[600px] rounded-[16px] overflow-hidden shrink-0"
+                        style="aspect-ratio: 600/350;">
+                        <img class="w-full h-full object-cover object-center" src="./public/assets/cards-cover.png"
+                            alt="Imagem do Projeto Cards Against Humanity">
+                    </div>
+                    <div class="flex flex-col md:w-[52%] lg:w-auto">
+                        <div
+                            class="flex items-center gap-2 mb-3 lg:mb-[18px] uppercase text-xs text-[var(--color-secondary-text)] font-medium">
+                            <img src="./public/assets/tag.svg" alt="Ícone de tag" class="w-4 h-4">
+                            Estudo de Caso
+                        </div>
+
+                        <h3
+                            class="text-3xl md:text-4xl lg:text-[42px] leading-[1.1] lg:leading-[1] font-medium font-serif mb-3 lg:mb-[18px]">
+                            Cards Against Humanity</h3>
+
+                        <p
+                            class="text-[var(--color-secondary-text)] text-base lg:text-[17px] leading-relaxed mb-4 lg:mb-[18px]">
+                            Um estudo de prototipagem que adapta o jogo de cartas Cards Against Humanity para uma
+                            experiência mobile web moderna.
+                        </p>
+
+                        <a class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                            href="cards-against-humanity.html">
                             Ver projeto
                             <img src="./public/assets/arrow-right.svg" alt="Seta indicando para a direita"
                                 class="w-4 h-4">
